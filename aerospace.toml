@@ -180,7 +180,12 @@ alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
 # App specific configurations
-# Common app ids: https://nikitabobko.github.io/AeroSpace/goodness#popular-apps-ids
+#
+# Common app ids: <https://nikitabobko.github.io/AeroSpace/goodness#popular-apps-ids>
+#
+# app-id is the CFBundleIdentifier found inside Info.plist. For e.g.
+# rg -A1 CFBundleIdentifier /Applications/WhatsApp.app/Contents/Info.plist
+#
 # check-further-callbacks is like break statement in switch. No further rule is evaluated if false
 # which is also the default.
 
@@ -217,6 +222,10 @@ run = 'layout floating'
 if.app-id = 'com.apple.weather'
 run = 'layout floating'
 
+##################################################################
+# Use workspace app for all communicator apps
+##################################################################
+
 # Slack
 [[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
@@ -227,3 +236,11 @@ run = ['move-node-to-workspace 4']
 # https://learn.microsoft.com/en-us/microsoft-365-apps/mac/preferences-outlook
 if.app-id = 'com.microsoft.Outlook'
 run = ['move-node-to-workspace 4']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.mail'
+run = 'move-node-to-workspace 4'
+
+[[on-window-detected]]
+if.app-id = 'net.whatsapp.WhatsApp'
+run = 'move-node-to-workspace 4'
