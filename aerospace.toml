@@ -12,7 +12,15 @@ after-login-command = []
 # You can use it to add commands that run after AeroSpace startup.
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = []
+# Start https://github.com/FelixKratz/JankyBorders. Use "man borders" for documentation on the
+# options.
+# NOTE: You need to specify the alpha as the first component of the color (FF). Otherwise the color
+#       won't show up.
+# A color formatted as 0xAARRGGBB, where A is the alpha channel, R the red channel, G the green
+# channel and B the blue channel. All constituents take a base 16 number, i.e. 0-F.
+after-startup-command = [
+  'exec-and-forget borders style=round hidpi=on active_color=0xffffa500 inactive_color=0xff494d64 width=7.0',
+]
 
 # Start AeroSpace at login
 start-at-login = true
