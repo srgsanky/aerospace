@@ -181,39 +181,49 @@ alt-shift-l = ['join-with right', 'mode main']
 
 # App specific configurations
 # Common app ids: https://nikitabobko.github.io/AeroSpace/goodness#popular-apps-ids
+# check-further-callbacks is like break statement in switch. No further rule is evaluated if false
+# which is also the default.
+
+# WARN: move-node-to-workspace has to be the last in a multi-instruction run configuration. For e.g.
+#       ['layout floating', 'move-node-to-workspace S']
+# WARN: Only layout floating/tiling are support.
 
 # Change layout of the focused window to the given layout
 [[on-window-detected]]
 if.app-id = 'com.cisco.anyconnect.gui'
-check-further-callbacks = true
 run = 'layout floating'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.ActivityMonitor'
-check-further-callbacks = true
 run = 'layout floating'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.Calculator'
-check-further-callbacks = true
 run = 'layout floating'
 
 [[on-window-detected]]
 if.app-id = 'com.docker.docker'
-check-further-callbacks = true
 run = 'layout floating'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.FaceTime'
-check-further-callbacks = true
 run = 'layout floating'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.Home'
-check-further-callbacks = true
 run = 'layout floating'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.weather'
-check-further-callbacks = true
 run = 'layout floating'
+
+# Slack
+[[on-window-detected]]
+if.app-id = 'com.tinyspeck.slackmacgap'
+run = ['move-node-to-workspace 4']
+
+# Outlook
+[[on-window-detected]]
+# https://learn.microsoft.com/en-us/microsoft-365-apps/mac/preferences-outlook
+if.app-id = 'com.microsoft.Outlook'
+run = ['move-node-to-workspace 4']
