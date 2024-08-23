@@ -78,7 +78,7 @@ inner.vertical = 12
 
 # Gap between window and monitor edge
 outer.left = 0
-outer.bottom = 6
+outer.bottom = 40 # Bottom gap is to show the sketchy bar
 outer.top = 6
 outer.right = 0
 
