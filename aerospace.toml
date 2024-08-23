@@ -153,9 +153,11 @@ alt-shift-f = 'fullscreen'
 alt-shift-t = 'macos-native-fullscreen'
 alt-shift-m = 'macos-native-minimize'
 
-# Float and unfloat. Mnemonics - [D]etach/[A]ttach to layout system
-alt-shift-d = 'layout floating'
-alt-shift-a = 'layout tiling'
+# Float and unfloat. Mnemonics - [O]ut/[I]in layout system.
+# Earlier I tried the mnemonic [D]etach/[A]ttach from the layout system, but the shortcut conflicts
+# with toggling dark mode in chrome.
+alt-shift-o = 'layout floating'
+alt-shift-i = 'layout tiling'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-shift-semicolon = 'mode service'
