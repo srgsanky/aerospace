@@ -195,6 +195,8 @@ alt-shift-l = ['join-with right', 'mode main']
 #
 # Common app ids: <https://nikitabobko.github.io/AeroSpace/goodness#popular-apps-ids>
 #
+# You can find bundle Id of running apps using "aerospace list-apps"
+#
 # app-id is the CFBundleIdentifier found inside Info.plist. For e.g.
 # rg -A1 CFBundleIdentifier /Applications/WhatsApp.app/Contents/Info.plist
 #
@@ -244,6 +246,10 @@ run = 'layout floating'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.QuickTimePlayerX'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'org.xquartz.X11'
 run = 'layout floating'
 
 ##################################################################
