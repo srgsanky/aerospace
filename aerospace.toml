@@ -231,7 +231,19 @@ if.app-id = 'com.apple.weather'
 run = 'layout floating'
 
 [[on-window-detected]]
+if.app-id = 'com.apple.stocks'
+run = 'layout floating'
+
+[[on-window-detected]]
 if.app-id = 'com.apple.finder'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'org.videolan.vlc'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.QuickTimePlayerX'
 run = 'layout floating'
 
 ##################################################################
@@ -262,6 +274,10 @@ run = 'move-node-to-workspace 2'
 if.app-id = 'org.mozilla.firefox'
 run = 'move-node-to-workspace 2'
 
+[[on-window-detected]]
+if.app-id = 'com.apple.Safari'
+run = 'move-node-to-workspace 2'
+
 ##################################################################
 # Use workspace 3 for misc windows
 ##################################################################
@@ -271,11 +287,19 @@ if.app-id = 'abnerworks.Typora'
 run = 'move-node-to-workspace 3'
 
 [[on-window-detected]]
+if.app-id = 'com.sublimetext.4'
+run = 'move-node-to-workspace 3'
+
+[[on-window-detected]]
 if.app-id = 'com.electron.amazonconnections'
 run = 'move-node-to-workspace 3'
 
 [[on-window-detected]]
 if.app-id = 'com.cisco.anyconnect.gui'
+run = ['layout floating', 'move-node-to-workspace 3']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.AppStore'
 run = ['layout floating', 'move-node-to-workspace 3']
 
 ##################################################################
