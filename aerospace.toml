@@ -256,10 +256,6 @@ run = 'layout floating'
 if.app-id = 'com.apple.reminders'
 run = 'layout floating'
 
-[[on-window-detected]]
-if.app-id = 'com.apple.Home'
-run = 'layout floating'
-
 ##################################################################
 # Use workspace 1 for terminal
 ##################################################################
@@ -319,6 +315,18 @@ run = ['layout floating', 'move-node-to-workspace 3']
 
 [[on-window-detected]]
 if.app-id = 'com.apple.AppStore'
+run = ['layout floating', 'move-node-to-workspace 3']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Home'
+run = ['layout floating', 'move-node-to-workspace 3']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.iMovieApp'
+run = ['layout floating', 'move-node-to-workspace 3']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.FinalCut'
 run = ['layout floating', 'move-node-to-workspace 3']
 
 ##################################################################
