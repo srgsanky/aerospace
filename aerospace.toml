@@ -116,10 +116,12 @@ alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-alt-h = 'focus left'
-alt-j = 'focus down'
-alt-k = 'focus up'
-alt-l = 'focus right'
+# "--boundaries-action stop" will prevent the focus from wrapping around.
+# The default was wrap-around-the-workspace
+alt-h = 'focus --boundaries-action stop left'
+alt-j = 'focus --boundaries-action stop down'
+alt-k = 'focus --boundaries-action stop up'
+alt-l = 'focus --boundaries-action stop right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
 alt-shift-h = 'move left'
