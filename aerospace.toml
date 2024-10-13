@@ -329,6 +329,10 @@ run = ['layout floating', 'move-node-to-workspace 3']
 if.app-id = 'com.apple.FinalCut'
 run = ['layout floating', 'move-node-to-workspace 3']
 
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Word'
+run = 'move-node-to-workspace 3'
+
 ##################################################################
 # Use workspace 4 for all communicator apps
 ##################################################################
