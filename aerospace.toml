@@ -357,6 +357,13 @@ if.app-id = 'com.microsoft.Outlook'
 run = ['move-node-to-workspace 4']
 
 # Chime
+# Keep the main Chime window floating
+[[on-window-detected]]
+if.app-id = 'com.amazon.Amazon-Chime'
+if.window-title-regex-substring = 'Amazon Chime$'
+run = ['layout floating', 'move-node-to-workspace 4']
+
+# Align/control any other chime meeting window
 [[on-window-detected]]
 if.app-id = 'com.amazon.Amazon-Chime'
 run = ['move-node-to-workspace 4']
