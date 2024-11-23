@@ -106,12 +106,15 @@ outer.right = 0
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
 # You can uncomment the following lines to open up terminal with alt + enter shortcut (like in i3)
-# alt-enter = '''exec-and-forget osascript -e '
-# tell application "Terminal"
-#     do script
-#     activate
-# end tell'
-# '''
+
+# I learnt this trick from <https://www.youtube.com/watch?v=5nwnJjr5eOo>
+cmd-g = 'exec-and-forget open -a /Applications/WezTerm.app'
+# Pair it with the following in your shell for switching windows via terminal (instead of Alfred for example)
+# Switch between windows using aerospace + fzf
+# function ff() {
+#   aerospace list-windows --all --format '%{window-id}%{right-padding} | %{app-name}%{right-padding} | %{window-title}' | \
+#     fzf --bind 'enter:execute(bash -c "aerospace focus --window-id {1}")+abort'
+# }
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 alt-slash = 'layout tiles horizontal vertical'
