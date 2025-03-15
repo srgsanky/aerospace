@@ -280,6 +280,10 @@ run = 'move-node-to-workspace 1'
 if.app-id = 'com.apple.Terminal'
 run = 'move-node-to-workspace 1'
 
+[[on-window-detected]]
+if.app-id = 'net.kovidgoyal.kitty'
+run = 'move-node-to-workspace 1'
+
 # zathura has NULL-APP-BUNDLE-ID as bundle Id. So, I am using the app name instead.
 [[on-window-detected]]
 if.app-name-regex-substring = 'zathura'
@@ -288,6 +292,12 @@ run = 'move-node-to-workspace 1'
 ##################################################################
 # Use workspace 2 for all browsers
 ##################################################################
+
+# Keep the sign-in windows floating on top of current window.
+[[on-window-detected]]
+if.app-id = 'com.google.Chrome'
+if.window-title-regex-substring = 'Sign in'
+run = ['layout floating']
 
 [[on-window-detected]]
 if.app-id = 'com.google.Chrome'
