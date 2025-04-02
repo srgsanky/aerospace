@@ -316,10 +316,6 @@ run = 'move-node-to-workspace 2'
 ##################################################################
 
 [[on-window-detected]]
-if.app-id = 'com.microsoft.VSCode'
-run = 'move-node-to-workspace 3'
-
-[[on-window-detected]]
 if.app-id = 'abnerworks.Typora'
 run = 'move-node-to-workspace 3'
 
@@ -393,3 +389,19 @@ run = 'move-node-to-workspace 4'
 [[on-window-detected]]
 if.app-id = 'com.apple.MobileSMS'
 run = 'move-node-to-workspace 4'
+
+##################################################################
+# Use workspace 5 for IDEs
+##################################################################
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Cursor'
+run = 'move-node-to-workspace 5'
+
+[[on-window-detected]]
+if.app-id = 'com.jetbrains.rustrover'
+run = 'move-node-to-workspace 5'
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.VSCode'
+run = 'move-node-to-workspace 5'
