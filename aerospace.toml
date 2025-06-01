@@ -24,6 +24,8 @@ after-login-command = []
 # so it won't be run twice on AeroSpace restart
 after-startup-command = [
   # Disabling janky borders as it is not very reliable based on my experience
+  # Also https://github.com/nikitabobko/AeroSpace/issues/131 claims that disabling it provides
+  # better results in avoiding freezes while switching between workspaces
   # 'exec-and-forget borders style=round hidpi=on active_color=0xffffa500 inactive_color=0xff494d64 width=7.0',
 
   'exec-and-forget sketchybar',
@@ -146,9 +148,9 @@ alt-3 = 'workspace 3'
 alt-4 = 'workspace 4'
 alt-5 = 'workspace 5'
 alt-6 = 'workspace 6'
-# alt-7 = 'workspace 7'
-# alt-8 = 'workspace 8'
-# alt-9 = 'workspace 9'
+alt-7 = 'workspace 7'
+alt-8 = 'workspace 8'
+alt-9 = 'workspace 9'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1'
@@ -157,9 +159,9 @@ alt-shift-3 = 'move-node-to-workspace 3'
 alt-shift-4 = 'move-node-to-workspace 4'
 alt-shift-5 = 'move-node-to-workspace 5'
 alt-shift-6 = 'move-node-to-workspace 6'
-# alt-shift-7 = 'move-node-to-workspace 7'
-# alt-shift-8 = 'move-node-to-workspace 8'
-# alt-shift-9 = 'move-node-to-workspace 9'
+alt-shift-7 = 'move-node-to-workspace 7'
+alt-shift-8 = 'move-node-to-workspace 8'
+alt-shift-9 = 'move-node-to-workspace 9'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
@@ -224,6 +226,11 @@ run = 'layout floating'
 if.app-id = 'com.apple.Calculator'
 run = 'layout floating'
 
+# Calendar
+[[on-window-detected]]
+if.app-id = 'com.apple.iCal'
+run = 'layout floating'
+
 [[on-window-detected]]
 if.app-id = 'com.docker.docker'
 run = 'layout floating'
@@ -262,6 +269,10 @@ run = 'layout floating'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.Preview'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.amazon.ACME'
 run = 'layout floating'
 
 ##################################################################
@@ -325,10 +336,14 @@ run = 'move-node-to-workspace 3'
 
 [[on-window-detected]]
 if.app-id = 'com.electron.amazonconnections'
-run = 'move-node-to-workspace 3'
+run = ['layout floating', 'move-node-to-workspace 3']
 
 [[on-window-detected]]
 if.app-id = 'com.cisco.anyconnect.gui'
+run = ['layout floating', 'move-node-to-workspace 3']
+
+[[on-window-detected]]
+if.app-id = 'com.cisco.secureclient.gui'
 run = ['layout floating', 'move-node-to-workspace 3']
 
 [[on-window-detected]]
