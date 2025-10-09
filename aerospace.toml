@@ -48,10 +48,10 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 # See: https://nikitabobko.github.io/AeroSpace/guide#layouts
 # The 'accordion-padding' specifies the size of accordion padding
 # You can set 0 to disable the padding feature
-accordion-padding = 200
+accordion-padding = 50
 
 # Possible values: tiles|accordion
-default-root-container-layout = 'tiles'
+default-root-container-layout = 'accordion'
 
 # Possible values: horizontal|vertical|auto
 # 'auto' means: wide monitor (anything wider than high) gets horizontal orientation,
@@ -82,7 +82,7 @@ inner.vertical = 12
 
 # Gap between window and monitor edge
 outer.left = 0
-outer.bottom = 40 # Bottom gap is to show the sketchy bar
+outer.bottom = 20 # Bottom gap is to show the sketchy bar
 outer.top = 6
 outer.right = 0
 
@@ -151,6 +151,9 @@ alt-6 = 'workspace 6'
 alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
+alt-s = 'workspace s' # Storage
+alt-c = 'workspace c' # Control
+alt-b = 'workspace b' # Blog
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1'
@@ -162,6 +165,9 @@ alt-shift-6 = 'move-node-to-workspace 6'
 alt-shift-7 = 'move-node-to-workspace 7'
 alt-shift-8 = 'move-node-to-workspace 8'
 alt-shift-9 = 'move-node-to-workspace 9'
+alt-shift-s = 'move-node-to-workspace s'
+alt-shift-c = 'move-node-to-workspace c'
+alt-shift-b = 'move-node-to-workspace b'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
@@ -275,6 +281,11 @@ run = 'layout floating'
 if.app-id = 'com.amazon.ACME'
 run = 'layout floating'
 
+# https://github.com/johnste/finicky
+[[on-window-detected]]
+if.app-id = 'se.johnste.finicky'
+run = 'layout floating'
+
 ##################################################################
 # Use workspace 1 for terminal
 ##################################################################
@@ -315,12 +326,12 @@ if.app-id = 'com.google.Chrome'
 run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
-if.app-id = 'org.mozilla.firefox'
+if.app-id = 'com.apple.Safari'
 run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
-if.app-id = 'com.apple.Safari'
-run = 'move-node-to-workspace 2'
+if.app-id = 'ai.perplexity.comet'
+run = ['layout floating', 'move-node-to-workspace 2']
 
 ##################################################################
 # Use workspace 3 for misc windows
@@ -364,6 +375,10 @@ run = ['layout floating', 'move-node-to-workspace 3']
 
 [[on-window-detected]]
 if.app-id = 'com.microsoft.Word'
+run = 'move-node-to-workspace 3'
+
+[[on-window-detected]]
+if.app-id = 'org.mozilla.firefox'
 run = 'move-node-to-workspace 3'
 
 ##################################################################
@@ -433,6 +448,10 @@ run = ['layout floating', 'move-node-to-workspace 6']
 if.app-id = 'com.jetbrains.intellij'
 run = 'move-node-to-workspace 6'
 
-[[on-window-detected]]
-if.app-id = 'com.microsoft.VSCode'
-run = 'move-node-to-workspace 5'
+# Removing the action for vscode. This helps open the vscode in the current window.
+# What I want is to move the window based on the project name, but it is too late for aerospace to react to the project name.
+# Typically, I open vscode and then pick the project, but aerospace responds to name of the window at the start.
+# [[on-window-detected]]
+# if.app-id = 'com.microsoft.VSCode'
+# run = 'move-node-to-workspace 5'
+# check-further-callbacks = true
