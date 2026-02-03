@@ -151,9 +151,8 @@ alt-6 = 'workspace 6'
 alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
-alt-s = 'workspace s' # Storage
-alt-c = 'workspace c' # Control
 alt-b = 'workspace b' # Blog
+alt-z = 'workspace b' # Zathura
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1'
@@ -165,9 +164,8 @@ alt-shift-6 = 'move-node-to-workspace 6'
 alt-shift-7 = 'move-node-to-workspace 7'
 alt-shift-8 = 'move-node-to-workspace 8'
 alt-shift-9 = 'move-node-to-workspace 9'
-alt-shift-s = 'move-node-to-workspace s'
-alt-shift-c = 'move-node-to-workspace c'
 alt-shift-b = 'move-node-to-workspace b'
+alt-shift-z = 'move-node-to-workspace z'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
@@ -309,7 +307,7 @@ run = 'move-node-to-workspace 1'
 # zathura has NULL-APP-BUNDLE-ID as bundle Id. So, I am using the app name instead.
 [[on-window-detected]]
 if.app-name-regex-substring = 'zathura'
-run = 'move-node-to-workspace 1'
+run = 'move-node-to-workspace z'
 
 ##################################################################
 # Use workspace 2 for all browsers
