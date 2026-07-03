@@ -110,7 +110,7 @@ outer.right = 0
 # You can uncomment the following lines to open up terminal with alt + enter shortcut (like in i3)
 
 # I learnt this trick from <https://www.youtube.com/watch?v=5nwnJjr5eOo>
-cmd-g = 'exec-and-forget open -a /Applications/WezTerm.app'
+# cmd-g = 'exec-and-forget open -a /Applications/WezTerm.app'
 # Pair it with the following in your shell for switching windows via terminal (instead of Alfred for example)
 # Switch between windows using aerospace + fzf
 # function ff() {
@@ -426,13 +426,26 @@ run = 'move-node-to-workspace 4'
 if.app-id = 'com.apple.MobileSMS'
 run = 'move-node-to-workspace 4'
 
+# Move zoom to workspace z
+[[on-window-detected]]
+if.app-id = 'us.zoom.xos'
+run = 'move-node-to-workspace z'
+
 ##################################################################
-# Use workspace 5 for IDEs
+# Use workspace 5 Codex
+##################################################################
+
+[[on-window-detected]]
+if.app-id = 'com.openai.codex'
+run = 'move-node-to-workspace 5'
+
+##################################################################
+# Use workspace 6 for IDEs
 ##################################################################
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'Cursor'
-run = 'move-node-to-workspace 5'
+run = 'move-node-to-workspace 6'
 
 [[on-window-detected]]
 if.app-id = 'com.jetbrains.rustrover'
