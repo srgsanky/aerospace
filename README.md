@@ -8,6 +8,16 @@
 brew install --cask nikitabobko/tap/aerospace
 ```
 
+## Change Apple settings for best experience
+
+```bash
+# Modify settings to avoid showing tiny windows in mission control
+defaults write com.apple.dock expose-group-apps -bool true && killall Dock
+
+# Disable "Displays have separate Spaces"
+defaults write com.apple.spaces spans-displays -bool true && killall SystemUIServer
+```
+
 ## Clone the configuration
 
 ```bash
