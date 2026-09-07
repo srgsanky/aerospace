@@ -122,6 +122,11 @@ outer.right = 0
 alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
 
+# Override macOS "Hide Application" and "Hide Others" shortcuts with stash operations.
+# See: https://nikitabobko.github.io/AeroSpace/commands#stash
+cmd-h = 'stash'
+cmd-alt-h = 'stash-picker'
+
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
 # "--boundaries-action stop" will prevent the focus from wrapping around.
 # The default was wrap-around-the-workspace
