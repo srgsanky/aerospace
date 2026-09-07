@@ -349,6 +349,10 @@ run = 'move-node-to-workspace 2'
 if.app-id = 'ai.perplexity.comet'
 run = ['layout floating', 'move-node-to-workspace 2']
 
+[[on-window-detected]]
+if.app-id = 'com.brave.Browser'
+run = 'move-node-to-workspace b'
+
 ##################################################################
 # Use workspace 3 for misc windows
 ##################################################################
