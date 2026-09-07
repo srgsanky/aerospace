@@ -34,7 +34,8 @@ git clone https://github.com/srgsanky/aerospace ~/.config/aerospace
 | Move currently focused window to **workspace**  | `alt-shift-1`                          |
 | Switch focus between most recent two workspaces | `alt-tab`                              |
 | Switch between tiles and accoridion             | `alt-/` (tiles), `alt-,` (accordion)   |
-| Move **workspace** to monitor                   | `alt-shift-tab`                        |
+| Move **workspace** to next monitor              | `alt-shift-tab`                        |
+| Swap **workspace** with directional monitor     | `ctrl-shift-tab`, then `h/j/k/l`       |
 | Resize                                          | `alt-shift-minus` or `alt-shift-+`     |
 | Stop managing window/start managing window      | `alt-shift-o` (out)/`alt-shift-i` (in) |
 | Full screen in desktop                          | `alt-shift-f`                          |
