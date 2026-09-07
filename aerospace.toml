@@ -288,6 +288,16 @@ run = 'layout floating'
 if.app-id = 'net.whatsapp.WhatsApp'
 run = 'layout floating'
 
+# Ghostty uses native MacOS tabs. Aerospace does not support native tabs well, so let it float instead.
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
+run = ['layout floating', 'move-node-to-workspace 1']
+
+# Typora uses native MacOS tabs. Aerospace does not support native tabs well, so let it float instead.
+[[on-window-detected]]
+if.app-id = 'abnerworks.Typora'
+run = ['layout floating', 'move-node-to-workspace 3']
+
 ##################################################################
 # Use workspace 1 for terminal
 ##################################################################
